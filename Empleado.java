@@ -11,10 +11,7 @@ public class Empleado extends Persona {
     }
 
     public void crearCuenta(Banco banco, Cliente cliente, String tipo, double saldoInicial) {
-        String numeroCuenta = "C-" + (int)(Math.random() * 10000);
-        Cuenta nuevaCuenta = new Cuenta(numeroCuenta, saldoInicial, tipo);
-        cliente.agregarCuenta(nuevaCuenta);
-        banco.agregarCuenta(nuevaCuenta);
+        banco.crearCuenta(cliente, tipo, saldoInicial);
     }
 
     public void realizarDeposito(Cuenta cuenta, double monto) {

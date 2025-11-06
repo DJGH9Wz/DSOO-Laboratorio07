@@ -6,10 +6,10 @@ public class Cuenta {
     private String tipo;
     private List<Transaccion> transacciones;
 
-    public Cuenta(String numero, String tipo, double saldoInicial) {
+    public Cuenta(String numero, double saldo, String tipo) {
         this.numero = numero;
         this.tipo = tipo;
-        this.saldo = saldoInicial;
+        this.saldo = saldo;
         this.transacciones = new ArrayList<>();
     }
 
