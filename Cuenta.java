@@ -23,6 +23,10 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
+    public List<Transaccion> getTransacciones() {
+    return transacciones;
+    }
+
     public void depositar(double monto) {
         Deposito d = new Deposito("D" + (transacciones.size() + 1), monto, numero);
         d.procesar(this);
