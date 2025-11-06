@@ -53,6 +53,14 @@ public class Banco {
         cuentas.add(cuenta);
     }
 
+    public void crearCuenta(Cliente cliente, String tipo, double saldoInicial) {
+    String numero = "C" + (cuentas.size() + 1);
+    Cuenta nueva = new Cuenta(numero, saldoInicial, tipo);
+    cuentas.add(nueva);
+    cliente.abrirCuenta(numero, saldoInicial, tipo);
+    System.out.println("Cuenta creada exitosamente para " + cliente.getNombre());
+}
+
     public String getNombreBanco() {
         return nombreBanco;
     }
